@@ -50,6 +50,8 @@ a:hover {
 .row {
     margin-left: 0px;
 }
+
+/* HEADER */
 @media screen and (min-width: 991.5px) {
     #top-nav {
         background-color: #b8326e;
@@ -83,36 +85,62 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.075);
     color: white;
 }
+#social-icons {
+    text-align: right;
+    box-sizing: border-box;
+}
+.social-icon-box {
+    padding: 8.5px 2px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.social-icon {
+    width: 26px;
+    max-height: 100%;
+}
 #nav-menu {
     height: 118px;
     width: 100%;
     background-color: rgb(214, 214, 214);
-    box-sizing: border-box;font-family: 'Montserrat Bold', Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Montserrat Bold', Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
 }
-@media (max-width: 767.5px) {
+@media (max-width: 991.5px) {
     #main-header {
         padding: 0px 40px;
     }
 }
 #site-logo {
-    width: 30%;
     height: 118px;
-    padding: 27px 0px;
     display: inline-block;
 }
-#site-logo img {
-    max-width: 100%;
-    max-height: 100%;
+@media (max-width: 991.5px) {
+    #site-logo {
+        width: 28%;
+        padding: 40px 0px;
+    }
+    #site-logo img {
+        width: 180px;
+    }
+}
+@media (min-width: 991.5px) {
+    #site-logo {
+        width: 17%;
+        padding: 44px 0px;
+    }
+    #site-logo img {
+        width: 150px;
+    }
 }
 @media (min-width: 991.5px) {
     #menu-links-box {
         vertical-align: top;
-        width: 69%;
-        padding-top: 51px;
-        padding-bottom: 51px;
+        width: 82.4%;
+        padding-top: 55px;
+        padding-bottom: 47px;
         text-align: right;
         box-sizing: border-box;
         display: inline-block;
@@ -143,12 +171,72 @@ a:hover {
     background-size: contain;
     background-repeat: no-repeat;
     text-align: right;
-    display: inline-block;
     margin: 34px 0px;
     box-sizing: border-box;
+    float: right;
+}
+#menu-icon:hover {
+    cursor: pointer;
 }
 #menu-icon img {
     max-width: 100%;
     max-height: 100%;
     padding-top: 12px;
+}
+@media (min-width: 991.5px) {
+    #menu-popout, #menu-x, #site-dim {
+        display: none;
+    }
+}
+@media (max-width: 991.5px) {
+    #menu-popout {
+        width: 320px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #f29f05;
+        font-family: 'Montserrat Bold', Helvetica, sans-serif;
+        text-transform: uppercase;
+        display: none;
+        z-index: 100;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .menu-popout-link {
+        padding: 20px;
+        border-bottom: 1.5px solid #232424;
+    }
+    #menu-logo {
+        background-color: white;
+        border-bottom: none;
+    }
+    #menu-popout a {
+        color: #232424;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        font-weight: 740;
+    }
+    #menu-x {
+        position: fixed;
+        top: 10px;
+        right: 340px;
+        width: 10px;
+        height: 10px;
+        z-index: 99;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+    }
+    #site-dim {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #23242471;
+        display: none;
+        z-index: 98;
+    } 
 }
