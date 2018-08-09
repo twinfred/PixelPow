@@ -207,6 +207,9 @@ a:hover {
         padding: 20px;
         border-bottom: 1.5px solid #232424;
     }
+    .menu-popout-link:hover {
+        background-color: #f0ae33;
+    }
     #menu-logo {
         background-color: white;
         border-bottom: none;
