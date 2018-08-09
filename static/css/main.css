@@ -57,14 +57,17 @@ a:hover {
         height: 44px;
         width: 100%;
         font-family: 'Open Sans', Helvetica, sans-serif;
-        font-weight: 700;
-        font-size: 13px;
+        font-weight: bold;
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 991.5px) {
     #top-nav {
         display: none;
     }
+}
+#donate-btn-box {
+    padding-left: 0px !important;
 }
 #donate-btn {
     height: 100%;
@@ -84,14 +87,20 @@ a:hover {
     height: 118px;
     width: 100%;
     background-color: rgb(214, 214, 214);
-    box-sizing: border-box;font-family: 'Montserrat', Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
+    box-sizing: border-box;font-family: 'Montserrat Bold', Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+@media (max-width: 767.5px) {
+    #main-header {
+        padding: 0px 40px;
+    }
 }
 #site-logo {
-    width: 25%;
+    width: 30%;
     height: 118px;
-    padding: 20px 0px;
+    padding: 27px 0px;
     display: inline-block;
 }
 #site-logo img {
@@ -101,8 +110,7 @@ a:hover {
 @media (min-width: 991.5px) {
     #menu-links-box {
         vertical-align: top;
-        width: 74.5%;
-        padding-left: 10%;
+        width: 69%;
         padding-top: 51px;
         padding-bottom: 51px;
         text-align: right;
@@ -115,11 +123,13 @@ a:hover {
         display: none;
     }
 }
-
+.menu-link:not(:first-child) {
+    margin-left: 4.9%;
+}
 .menu-link {
     display: inline-block;
-    margin-left: 6.4%;
     padding-bottom: 4px;
+    text-transform: uppercase;
 }
 .menu-link a {
     color: #232424;
