@@ -1,0 +1,17 @@
+{
+  "name": "pixelpow",
+  "version": "1.0.0",
+  "description": "Pixel Pow is an educational resource that makes the perfect sidekick for graphic design students & faculty who want to incorporate comic books into their curriculums & research.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Tim Winfred (timwinfred@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
