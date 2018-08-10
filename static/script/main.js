@@ -29,29 +29,35 @@ $(document).ready(function(){
     const hero_images = ['/img/heroslider1.png','/img/heroslider2.png','/img/heroslider3.png']
     var curr_img = 0;
     var img_cnt = hero_images.length;
+    
 
     // Auto Rotate
-    setInterval(function(){
+    var myTimer = setInterval(function(){
         changeHeroImg(curr_img + 1);
     }, 6000)
 
     // Left Arrow Click
     $('#hero-left-arrow').click(function(){
+        resetHeroTimer();
         changeHeroImg(curr_img - 1);
     })
 
     // Right Arrow Click
     $('#hero-right-arrow').click(function(){
+        resetHeroTimer();
         changeHeroImg(curr_img + 1);
     })
 
+    // Dot Click
     $('.hero-dot').click(function(){
+        resetHeroTimer();
         let dot = $(this).attr('id');
         dot = parseInt(dot[dot.length-1]);
         changeHeroImg(dot);
     })
 
     function changeHeroImg(go_to_img){
+        resetHeroTimer();
         if(go_to_img == curr_img){
             return;
         }
@@ -67,5 +73,12 @@ $(document).ready(function(){
             $('#hero-dot-'+go_to_img).css('background-image', 'url("/img/dot_yellow.png")');
             curr_img = go_to_img;
         }).fadeTo('slow', 1);
+    }
+
+    function resetHeroTimer(){
+        clearInterval(myTimer);
+        myTimer = setInterval(function(){
+            changeHeroImg(curr_img + 1);
+        }, 6000)
     }
 })

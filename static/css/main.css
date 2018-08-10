@@ -57,9 +57,9 @@ p {
 }
 h2 {
     font-size: 32px;
-    line-height: 30px;
+    line-height: 34px;
     margin: 28px 0px;
-    font-weight: bold;
+    font-weight: 900;
 }
 h3 {
     font-size: 26px;
@@ -118,7 +118,7 @@ h3 {
     height: 118px;
     width: 100%;
     box-sizing: border-box;
-    font-family: 'Montserrat Bold', Helvetica, sans-serif;
+    font-family: 'Montserrat', Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -211,7 +211,7 @@ h3 {
         top: 0;
         right: 0;
         background-color: #f29f05;
-        font-family: 'Montserrat Bold', Helvetica, sans-serif;
+        font-family: 'Montserrat', Helvetica, sans-serif;
         text-transform: uppercase;
         display: none;
         z-index: 100;
@@ -360,41 +360,71 @@ h3 {
 }
 
 /* Issues */
-.issue-box {
-    position: relative;
-    color: white;
-}
-.issue-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 650px;
-    width: 100%;
-    display: inline-block;
-    z-index: 96;
-}
-#issue-1-img {
-    background-image: url('/img/workshop1.png');
-    background-size: cover;
-}
-.issue-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 650px;
-    width: 55%;
-    display: inline-block;
-    z-index: 97;
-    border-bottom: 650px solid #f23322;
-    border-left: 150px solid transparent;
-    /* border-right: 50px solid transparent; */
-}
 .issue-number {
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-style: italic;
     margin-bottom: 8px;
 }
 .issue-title {
-    font-family: 'Montserrat Bold', Helvetica, sans-serif;
+    font-family: 'Montserrat', Helvetica, sans-serif;
     margin-top: 0px;
 }
+/* Issues - Desktop */
+@media (min-width: 991.5px) {
+    .issue-box {
+        position: relative;
+        color: white;
+    }
+    .issue-img-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 650px;
+        width: 100%;
+        display: inline-block;
+    }
+    #issue-1-img {
+        background-image: url('/img/workshop1.png');
+        background-size: cover;
+    }
+    .issue-textarea-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 650px;
+        width: 55%;
+        display: inline-block;
+        border-bottom: 650px solid #f23322;
+        border-left: 150px solid transparent;
+    }
+    .issue-content-right {
+        position: absolute;
+        padding-right: 15px;
+        width: 290px;
+    }
+    #issue-1-content {
+        top: 100px;
+    }
+    .issue-content-right {
+        right: 8.333333%;
+    }
+}
+@media (min-width: 1144.5px) {
+    .issue-content-right {
+        right: 12.5%;
+        width: 320px;
+    }
+}
+@media (min-width: 1239.5px) {
+    .issue-content-right {
+        right: 16.666666%;
+        width: 320px;
+    }
+}
+@media (min-width: 1404.5px) {
+    .issue-content-right {
+        right: 16.666666%;
+        width: 370px;
+    }
+}
+/* Issues - Mobile */
