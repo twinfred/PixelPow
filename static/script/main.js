@@ -50,6 +50,14 @@ $(document).ready(function(){
         changeHeroImg(curr_img + 1);
     }, 6000)
 
+    // Reset Auto Rotate Timer
+    function resetHeroTimer(){
+        clearInterval(myTimer);
+        myTimer = setInterval(function(){
+            changeHeroImg(curr_img + 1);
+        }, 6000)
+    }
+
     // Left Arrow Click
     $('#hero-left-arrow').click(function(){
         resetHeroTimer();
@@ -87,12 +95,5 @@ $(document).ready(function(){
             $('#hero-dot-'+go_to_img).css('background-image', 'url("/img/dot_yellow.png")');
             curr_img = go_to_img;
         }).fadeTo('slow', 1);
-    }
-
-    function resetHeroTimer(){
-        clearInterval(myTimer);
-        myTimer = setInterval(function(){
-            changeHeroImg(curr_img + 1);
-        }, 6000)
     }
 })
