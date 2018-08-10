@@ -49,6 +49,7 @@ a:hover {
 }
 .row {
     margin-left: 0px;
+    margin-right: 0px;
 }
 p {
     font-size: 13px;
@@ -265,12 +266,21 @@ h3 {
     position: relative;
 }
 #hero-slider-img {
-    background-image: url('/img/heroslider1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-width: 100%;
     min-height: 100%;
+}
+@media (min-width: 767.5px) {
+    #hero-slider-img {
+        background-image: url('/img/heroslider1.png');
+    }
+}
+@media (max-width: 767.5px) {
+    #hero-slider-img {
+        background-image: url('/img/mobile_heroslider1.png');
+    }
 }
 .hero-arrow {
     position: absolute;

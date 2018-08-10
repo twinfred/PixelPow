@@ -26,10 +26,24 @@ $(document).ready(function(){
     })
 
 // HERO IMAGE SLIDER
-    const hero_images = ['/img/heroslider1.png','/img/heroslider2.png','/img/heroslider3.png']
+    const desktop_hero_images = ['/img/heroslider1.png','/img/heroslider2.png','/img/heroslider3.png'];
+    const mobile_hero_images = ['/img/mobile_heroslider1.png','/img/mobile_heroslider2.png','/img/mobile_heroslider3.png'];
+    var hero_images = [];
     var curr_img = 0;
-    var img_cnt = hero_images.length;
-    
+    var img_cnt = 3;
+
+    var windowSize = window.innerWidth;
+    setHeroImages();
+
+    function setHeroImages(){
+        hero_images = windowSize > 767.5 ? desktop_hero_images : mobile_hero_images;
+        $('#hero-slider-img').css('background-image', 'url('+hero_images[curr_img]+')');
+    }
+
+    window.addEventListener('resize', function(){
+        windowSize = window.innerWidth;
+        setHeroImages();
+    })
 
     // Auto Rotate
     var myTimer = setInterval(function(){
