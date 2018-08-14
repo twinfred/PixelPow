@@ -30,7 +30,7 @@ $(document).ready(function(){
     const mobile_hero_images = ['/img/mobile_heroslider1.png','/img/mobile_heroslider2.png','/img/mobile_heroslider3.png'];
     var hero_images = [];
     var curr_img = 0;
-    var img_cnt = 3;
+    const img_cnt = 3;
 
     var windowSize = window.innerWidth;
     setHeroImages();
@@ -79,10 +79,10 @@ $(document).ready(function(){
     })
 
     function changeHeroImg(go_to_img){
-        resetHeroTimer();
         if(go_to_img == curr_img){
             return;
         }
+        resetHeroTimer();
         if(go_to_img >= img_cnt){
             go_to_img = 0;
         }
@@ -95,5 +95,35 @@ $(document).ready(function(){
             $('#hero-dot-'+go_to_img).css('background-image', 'url("/img/dot_yellow.png")');
             curr_img = go_to_img;
         }).fadeTo('slow', 1);
+    }
+
+// TESTIMONIAL SLIDER
+    var testimonial = 0;
+    const t_count = 3;
+
+    // Left Arrow Click
+    $('.testimonial-prev').click(function(){
+        console.log('left clicked')
+        changeTestimonial(testimonial - 1, "left");
+    })
+
+    // Right Arrow Click
+    $('.testimonial-next').click(function(){
+        console.log('right clicked')
+        changeTestimonial(testimonial + 1, "right");
+    })
+
+    function changeTestimonial(go_to_test, direction){
+        if(go_to_test >= t_count){
+            go_to_test = 0;
+        }
+        if(go_to_test < 0){
+            go_to_test = t_count - 1;
+        }
+        $('#testimonial-'+testimonial).hide("slide", {direction: direction}, function(){
+            direction = direction == "left" ? "right" : "left";
+            $('#testimonial-'+go_to_test).show("slide", {direction: direction});
+            testimonial = go_to_test;
+        });
     }
 })
