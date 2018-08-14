@@ -13,7 +13,7 @@
     <meta property="og:image:width" content="630">
     <meta property="og:image:height" content="330">
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:100,300,500,700,900' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -32,28 +32,12 @@
     <main>
         <%- include('blocks/hero_slider') -%>
         <!-- About Us -->
-        <div id="about-us-box" class="row">
-            <div class="col-0 col-lg-1 col-xl-2"></div>
-            <div class="col-12 col-lg-10 col-xl-8">
-                <h3>About Us</h3>
-                <p>Pixel Pow is an educational resource that makes the perfect sidekick for graphic design students &amp; faculty who want to incorporate comic books into their curriculums &amp; research.</p>
-                <p>Few people know the truth, but comic book have a secret identity! Behind their epic stories and incredible heroes, comics are concealing an entire world of graphic design technique that can be used to inform and support lesson plans for all skill levels.</p>
-                <p>Give your work the superpowers it deserves with Pixel Pow!</p>
-                <div class="yellow-bar"></div>
-            </div>
-            <div class="col-0 col-lg-1 col-xl-2"></div>
-        </div>
+        <%- include('blocks/aboutus') -%>
         <!-- Issue #1 -->
-        <div id="issue-1" class="issue-box">
-            <div id="issue-1-img" class="issue-img-left"></div>
-            <div id="issue-1-textarea" class="issue-textarea-right"></div>
-            <div id="issue-1-content" class="issue-content-right">
-                <p class="issue-number">Issue #1</p>
-                <h2 class="issue-title">The Origin Story: Graphic Design Basics</h2>
-            </div>
-        </div>
+        <%- include('blocks/issue1') -%>
         <!-- Issue #2 -->
         <!-- Issue #3 -->
+        <%- include('blocks/issue3') -%>
         <!-- Testimonials -->
             <!-- Testimonials Slider -->
             <!-- Testimonials CTA -->

@@ -58,7 +58,7 @@ p {
 }
 h2 {
     font-size: 32px;
-    line-height: 34px;
+    line-height: 36px;
     margin: 28px 0px;
     font-weight: 900;
 }
@@ -66,6 +66,22 @@ h3 {
     font-size: 26px;
     line-height: 30px;
     margin: 28px 0px;
+}
+h4 {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 18px 0px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+}
+h6 {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 18px 0px;
+    font-weight: 500;
+    letter-spacing: .9px;
 }
 
 /* HEADER */
@@ -370,6 +386,9 @@ h3 {
 }
 
 /* Issues */
+.issue-box {
+    margin-top: -5px;
+}
 .issue-number {
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-style: italic;
@@ -378,6 +397,42 @@ h3 {
 .issue-title {
     font-family: 'Montserrat', Helvetica, sans-serif;
     margin-top: 0px;
+    letter-spacing: 1.1px;
+}
+.issue-content {
+    font-family: 'Varela Round', Helvetica, sans-serif;
+}
+.in-this-issue {
+    margin-bottom: 0px;
+}
+.issue-details {
+    letter-spacing: .8px;
+}
+.white-bar {
+    height: 2px;
+    width: 50px;
+    background-color: white;
+    margin-bottom: 28px;
+}
+.download-btn {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #2c2c2c;
+    border: none;
+    width: 115px;
+    height: 36px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.download-btn:hover {
+    border: 1px solid white;
+}
+.stats-white-bar {
+    height: 3.5px;
+    width: 30px;
+    background-color: white;
+    margin: 0px auto 18px auto;
 }
 /* Issues - Desktop */
 @media (min-width: 991.5px) {
@@ -386,15 +441,19 @@ h3 {
         color: white;
     }
     .issue-img-left {
-        position: absolute;
+        /* position: absolute;
         top: 0;
-        left: 0;
+        left: 0; */
         height: 650px;
         width: 100%;
         display: inline-block;
     }
     #issue-1-img {
         background-image: url('/img/workshop1.png');
+        background-size: cover;
+    }
+    #issue-3-img {
+        background-image: url('/img/workshop2.png');
         background-size: cover;
     }
     .issue-textarea-right {
@@ -404,19 +463,28 @@ h3 {
         height: 650px;
         width: 55%;
         display: inline-block;
+    }
+    #issue-1-textarea {
         border-bottom: 650px solid #f23322;
+        border-left: 150px solid transparent;
+    }
+    #issue-3-textarea {
+        border-bottom: 650px solid #7b59ad;
         border-left: 150px solid transparent;
     }
     .issue-content-right {
         position: absolute;
         padding-right: 15px;
-        width: 290px;
+        width: 320px;
     }
     #issue-1-content {
         top: 100px;
     }
+    #issue-3-content {
+        top: 38px;
+    }
     .issue-content-right {
-        right: 8.333333%;
+        right: 20%;
     }
 }
 @media (min-width: 1144.5px) {
@@ -424,17 +492,102 @@ h3 {
         right: 12.5%;
         width: 320px;
     }
+    .issue-stat {
+        text-align: center;
+        display: inline-block;
+        margin-right: 15px;
+    }
 }
 @media (min-width: 1239.5px) {
     .issue-content-right {
-        right: 16.666666%;
+        right: 34%;
         width: 320px;
     }
 }
 @media (min-width: 1404.5px) {
     .issue-content-right {
-        right: 16.666666%;
+        right: 36%;
         width: 370px;
     }
 }
+@media (max-width: 1404.5px) {
+    .issue-stat {
+        text-align: center;
+        display: inline-block;
+        margin-right: 12px;
+    }
+    .issue-stat h4 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .issue-stat h6 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
 /* Issues - Mobile */
+@media (max-width: 991.5px) {
+    .issue-content {
+        padding: 45px;
+        text-align: center;
+        width: 100%;
+    }
+    .issue-box {
+        position: relative;
+        color: white;
+    }
+    .issue-img {
+        height: 500px;
+        width: 100%;
+    }
+    #issue-1-img {
+        background-image: url('/img/mobile_workshop1.png');
+        background-size: cover;
+    }
+    #issue-3-img {
+        background-image: url('/img/mobile_workshop3.png');
+        background-size: cover;
+    }
+    .issue-textarea-right {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+    }
+    #issue-1-textarea {
+        background-color: #f23322;
+    }
+    #issue-3-textarea {
+        background-color: #7b59ad;
+    }
+    .issue-stat {
+        text-align: center;
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .issue-number {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+    .issue-title {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .white-bar {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+@media (max-width: 500px) {
+    .issue-stat {
+        display: block;
+        margin-bottom: 45px;
+    }
+    .issue-stat h4 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .issue-stat h6 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
