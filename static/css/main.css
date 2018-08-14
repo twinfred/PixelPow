@@ -499,7 +499,7 @@ h6 {
         top: 86px;
     }
     #issue-2-content {
-        top: 55px;
+        top: 48px;
     }
     #issue-3-content {
         top: 38px;
@@ -510,36 +510,53 @@ h6 {
     .issue-content-left {
         left: 35.666666%;
     }
+    #issue-1-title {
+        width: 310px;
+    }
+    #issue-3-title {
+        width: 212px;
+    }
+    .issue-stat-right:not(:last-child){
+        margin-right: 18px;
+    }
+    .issue-stat-left:not(:first-child){
+        margin-left: 18px;
+    }
 }
 @media (min-width: 1144.5px) {
     .issue-content-right {
         right: 12.5%;
-        width: 320px;
+        width: 340px;
     }
     .issue-content-left {
         right: 12.5%;
-        width: 320px;
+        width: 325px;
     }
     .issue-stat {
         text-align: center;
         display: inline-block;
-        margin-right: 15px;
+    }
+    .issue-stat-right:not(:last-child){
+        margin-right: 22px;
+    }
+    .issue-stat-left:not(:first-child){
+        margin-left: 22px;
     }
 }
 @media (min-width: 1239.5px) {
     .issue-content-right {
         right: 34%;
-        width: 320px;
+        width: 340px;
     }
     .issue-content-left {
         right: 34%;
-        width: 320px;
+        width: 330px;
     }
 }
 @media (min-width: 1404.5px) {
     .issue-content-right {
         right: 36%;
-        width: 370px;
+        width: 390px;
     }
     .issue-content-left {
         right: 36%;
@@ -550,7 +567,7 @@ h6 {
     .issue-stat {
         text-align: center;
         display: inline-block;
-        margin-right: 12px;
+
     }
     .issue-stat h4 {
         font-size: 20px;
