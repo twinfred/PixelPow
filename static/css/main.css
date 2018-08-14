@@ -60,7 +60,7 @@ h2 {
     font-size: 32px;
     line-height: 36px;
     margin: 28px 0px;
-    font-weight: 900;
+    font-weight: 700;
 }
 h3 {
     font-size: 26px;
@@ -387,7 +387,12 @@ h6 {
 
 /* Issues */
 .issue-box {
-    margin-top: -5px;
+    margin-top: -4px;
+}
+.issue-img {
+    height: 650px;
+    width: 100%;
+    display: inline-block;
 }
 .issue-number {
     font-family: 'Open Sans', Helvetica, sans-serif;
@@ -440,20 +445,16 @@ h6 {
         position: relative;
         color: white;
     }
-    .issue-img-left {
-        /* position: absolute;
-        top: 0;
-        left: 0; */
-        height: 650px;
-        width: 100%;
-        display: inline-block;
-    }
     #issue-1-img {
         background-image: url('/img/workshop1.png');
         background-size: cover;
     }
-    #issue-3-img {
+    #issue-2-img {
         background-image: url('/img/workshop2.png');
+        background-size: cover;
+    }
+    #issue-3-img {
+        background-image: url('/img/workshop3.png');
         background-size: cover;
     }
     .issue-textarea-right {
@@ -461,12 +462,24 @@ h6 {
         top: 0;
         right: 0;
         height: 650px;
-        width: 55%;
+        width: 56.5%;
+        display: inline-block;
+    }
+    .issue-textarea-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 650px;
+        width: 57.5%;
         display: inline-block;
     }
     #issue-1-textarea {
         border-bottom: 650px solid #f23322;
         border-left: 150px solid transparent;
+    }
+    #issue-2-textarea {
+        border-bottom: 650px solid #b8326e;
+        border-right: 150px solid transparent;
     }
     #issue-3-textarea {
         border-bottom: 650px solid #7b59ad;
@@ -477,8 +490,16 @@ h6 {
         padding-right: 15px;
         width: 320px;
     }
+    .issue-content-left {
+        position: absolute;
+        padding-left: 15px;
+        width: 320px;
+    }
     #issue-1-content {
-        top: 100px;
+        top: 86px;
+    }
+    #issue-2-content {
+        top: 55px;
     }
     #issue-3-content {
         top: 38px;
@@ -486,9 +507,16 @@ h6 {
     .issue-content-right {
         right: 20%;
     }
+    .issue-content-left {
+        left: 35.666666%;
+    }
 }
 @media (min-width: 1144.5px) {
     .issue-content-right {
+        right: 12.5%;
+        width: 320px;
+    }
+    .issue-content-left {
         right: 12.5%;
         width: 320px;
     }
@@ -503,9 +531,17 @@ h6 {
         right: 34%;
         width: 320px;
     }
+    .issue-content-left {
+        right: 34%;
+        width: 320px;
+    }
 }
 @media (min-width: 1404.5px) {
     .issue-content-right {
+        right: 36%;
+        width: 370px;
+    }
+    .issue-content-left {
         right: 36%;
         width: 370px;
     }
@@ -544,17 +580,25 @@ h6 {
         background-image: url('/img/mobile_workshop1.png');
         background-size: cover;
     }
+    #issue-2-img {
+        background-image: url('/img/mobile_workshop2.png');
+        background-size: cover;
+    }
     #issue-3-img {
         background-image: url('/img/mobile_workshop3.png');
         background-size: cover;
     }
-    .issue-textarea-right {
+    .issue-textarea {
         height: 100%;
         width: 100%;
         display: inline-block;
+        margin-top: -4px;
     }
     #issue-1-textarea {
         background-color: #f23322;
+    }
+    #issue-2-textarea {
+        background-color: #b8326e;
     }
     #issue-3-textarea {
         background-color: #7b59ad;
