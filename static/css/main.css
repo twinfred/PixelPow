@@ -95,6 +95,26 @@ input {
 }
 
 /* HEADER */
+/* Sticky Header */
+@media (max-width: 991.5px) {
+    #sticky-nav {
+        height: 118px;
+    }
+}
+@media (min-width: 991.5px) {
+    #sticky-nav {
+        height: 162px;
+    }
+}
+#nav-menu-box {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: rgb(140, 140, 140) 0px 9px 21px -17px;
+}
+
+/* Pink Top Nav */
 @media screen and (min-width: 991.5px) {
     #top-nav {
         background-color: #b8326e;
@@ -141,6 +161,7 @@ input {
     width: 26px;
     max-height: 100%;
 }
+/* Main Nav Menu */
 #nav-menu {
     height: 118px;
     width: 100%;
@@ -149,6 +170,7 @@ input {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
+    background-color: white;
 }
 @media (max-width: 991.5px) {
     #main-header {
