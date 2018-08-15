@@ -70,7 +70,7 @@ h3 {
 h4 {
     font-family: 'Montserrat', Helvetica, sans-serif;
     font-size: 24px;
-    line-height: 26px;
+    line-height: 34px;
     margin: 18px 0px;
     font-weight: 700;
     letter-spacing: 1.1px;
@@ -89,6 +89,9 @@ h6 {
     margin: 18px 0px;
     font-weight: 500;
     letter-spacing: .9px;
+}
+input {
+    font-family: 'Varela Round', Helvetica, sans-serif;
 }
 
 /* HEADER */
@@ -757,13 +760,150 @@ h6 {
 #testimonial-cta {
     background-color: #f29f05;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 #testimonial-cta h5 {
     color: white;
 }
 @media (max-width: 991.5px) {
     #testimonial-cta {
+        display: none;
+    }
+}
+
+/* School Clients */
+#school-clients-box {
+    color: #232424;
+    text-align: center;
+}
+.school-img {
+    width: 185px;
+    display: inline-block;
+    padding: 20px 0px;
+}
+@media (min-width: 991.5px) {
+    #school-clients-box {
+        padding: 90px 0px;
+    }
+    #school-clients-box h4 {
+        margin-bottom: 70px;
+    }
+}
+@media (max-width: 991.5px) {
+    #school-clients-box {
+        padding: 15px 0px;
+    }
+    #school-clients-box h4 {
+        margin-bottom: 40px;
+    }
+}
+
+/* Newsletter Signup */
+#newsletter-box {
+    text-align: center;
+    color: white;
+    padding: 40px 10px 70px 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (min-width: 991.5px) {
+    #newsletter-box {
+        background-image: url('/img/footer_bg.png');
+    }
+}
+@media (max-width: 991.5px) {
+    #newsletter-box {
+        background-image: url('/img/mobile_footer_bg.png');
+        height: 400px;
+    }
+}
+#newsletter-box h6 {
+    font-weight: 700;
+}
+#newsletter-form {
+    margin: 36px 0px;
+}
+#newsletter-email {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    padding: 3px 5px;
+    color: white;
+    vertical-align: top;
+    font-size: 14px;
+    height: 28px;
+    width: 200px;
+}
+::-webkit-input-placeholder { /* Chrome */
+    color: rgba(255, 255, 255, 0.575);
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(255, 255, 255, 0.575);
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.575);
+    opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+    color: rgba(255, 255, 255, 0.575);
+    opacity: 1;
+}
+#newsletter-btn {
+    background-color: rgba(255, 255, 255, 0.575);
+    background-image: url('/img/mailing_list_button.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    height: 28px;
+    width: 40px;
+    vertical-align: top;
+}
+#footer-social-icons {
+    padding-bottom: 40px;
+}
+
+/* Footer */
+#footer-bar {
+    background-color: #03050d;
+    height: 80px;
+    width: 100%;
+    padding: 20px 0px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: white;
+}
+#copyright {
+    display: inline-block;
+    float: right;
+    margin: 0px;
+    padding: 10px 0px;
+}
+#back2top-btn {
+    background-color: #1c1d1d;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    float: right;
+    margin-left: 2.7%;
+    margin-top: -40px;
+    background-image: url('/img/mobile_arrow_up_white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#back2top-btn:hover {
+    cursor: pointer;
+}
+@media (max-width: 991.5px) {
+    #footer-bar {
+        text-align: center;
+    }
+    #footer-logo {
+        display: none;
+    }
+    #copyright {
+        float: none;
+    }
+    #back2top-btn {
         display: none;
     }
 }

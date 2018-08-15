@@ -126,4 +126,10 @@ $(document).ready(function(){
             testimonial = go_to_test;
         });
     }
+
+    // Footer Btn
+    $('#back2top-btn').click(function(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
 })
