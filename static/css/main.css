@@ -95,6 +95,24 @@ input {
 }
 
 /* HEADER */
+/* Anchor Links */
+@media (min-width: 991.5px) {
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -162px;
+        visibility: hidden;
+    }
+}
+@media (max-width: 991.5px) {
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -118px;
+        visibility: hidden;
+    }
+}
+
 /* Sticky Header */
 @media (max-width: 991.5px) {
     #sticky-nav {

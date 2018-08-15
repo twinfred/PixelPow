@@ -1,4 +1,27 @@
 $(document).ready(function(){
+// Scrolling Hyperlinks
+    function scrollToAnchor(anchor){
+        $("html, body").animate({
+            scrollTop: $(anchor).offset().top
+        }, 800);
+    }
+    // Desktop Nav Menu Links
+    $('.menu-link').find('a').click(function(e){
+        e.preventDefault();
+        let anchor_tag = $(this).attr('href');
+        scrollToAnchor(anchor_tag);
+    })
+    // Popout Nav Menu Links
+    $('#menu-popout').find('a').click(function(e){
+        e.preventDefault();
+        hidePopoutMenu();
+        let anchor_tag = $(this).attr('href');
+        scrollToAnchor(anchor_tag);
+    })
+    // Footer Btn
+    $('#back2top-btn').click(function(){
+        scrollToAnchor('#sticky-nav');
+    })
 
 // POPOUT MENU
     // Show Popout Menu
@@ -103,13 +126,11 @@ $(document).ready(function(){
 
     // Left Arrow Click
     $('.testimonial-prev').click(function(){
-        console.log('left clicked')
         changeTestimonial(testimonial - 1, "left");
     })
 
     // Right Arrow Click
     $('.testimonial-next').click(function(){
-        console.log('right clicked')
         changeTestimonial(testimonial + 1, "right");
     })
 
@@ -126,10 +147,4 @@ $(document).ready(function(){
             testimonial = go_to_test;
         });
     }
-
-    // Footer Btn
-    $('#back2top-btn').click(function(){
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    })
 })

@@ -14,7 +14,7 @@
     <meta property="og:image:height" content="330">
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:100,300,500,700,900' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Varela%20Round' rel='stylesheet'>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -43,12 +43,12 @@
                     <div class="col-sm-6"></div>
                     <div class="col-sm-3">
                         <div id="social-icons">
-                            <div id="fb-icon" class="social-icon-box">
+                            <div class="fb-icon social-icon-box">
                                 <a href="#!">
                                     <img class="social-icon" src="/img/fb-icon.png" alt="PixelPOW on Facebook">
                                 </a>
                             </div>
-                            <div id="ig-icon" class="social-icon-box">
+                            <div class="ig-icon social-icon-box">
                                 <a href="#!">
                                     <img class="social-icon" src="/img/ig-icon.png" alt="PixelPOW on Instagram">
                                 </a>
@@ -69,11 +69,11 @@
                     </div>
                     <!-- Desktop Menu -->
                     <div id="menu-links-box">
-                            <div class="menu-link"><a href="#!">Home</a></div>
-                            <div class="menu-link"><a href="#!">About Us</a></div>
-                            <div class="menu-link"><a href="#!">Workshops</a></div>
-                            <div class="menu-link"><a href="#!">Testimonials</a></div>
-                            <div class="menu-link"><a href="#!">Contact</a></div>
+                        <div class="menu-link"><a href="#sticky-nav">Home</a></div>
+                        <div class="menu-link"><a href="#about-anchor">About Us</a></div>
+                        <div class="menu-link"><a href="#issue-anchor">Workshops</a></div>
+                        <div class="menu-link"><a href="#testimonial-anchor">Testimonials</a></div>
+                        <div class="menu-link"><a href="mailto:david@davidayllon.com">Contact</a></div>
                     </div>
                     <!-- Mobile Popout Nav -->
                     <div id="menu-icon" class="d-lg-none">
@@ -84,18 +84,19 @@
                         <div id="menu-logo" class="menu-popout-link">
                             <img src="/img/pixelpow-logo.png" alt="PixelPOW logo">
                         </div>
-                        <a href="#!">
+                        <a href="#sticky-nav">
                             <div class="menu-popout-link">Home</div>
                         </a>
-                        <a href="#!">
+                        <a href="#about-anchor">
                             <div class="menu-popout-link">About Us</div>
                         </a>
-                        <a href="#!">
+                        <a href="#issue-anchor">
                             <div class="menu-popout-link">Workshops</div>
                         </a>
-                        <a href="#!">
+                        <a href="#testimonial-anchor">
                             <div class="menu-popout-link">Testimonials</div>
-                        <a href="#!">
+                        </a>
+                        <a href="mailto:david@davidayllon.com">
                             <div class="menu-popout-link">Contact</div>
                         </a>
                         <a href="#!">
@@ -108,7 +109,6 @@
         </div>
     </header>
     <main>
-        <!-- Hero Slider -->
         <div id="hero-slider">
             <div id="hero-slider-img"></div>
             <div id="hero-left-arrow" class="hero-arrow"></div>
@@ -120,6 +120,7 @@
             </div>
         </div>
         <!-- About Us -->
+        <a class="anchor" id="about-anchor"></a>
         <div id="about-us-box" class="row">
             <div class="offset-lg-1 offset-xl-2"></div>
             <div class="col-12 col-lg-10 col-xl-8">
@@ -131,6 +132,7 @@
             </div>
         </div>
         <!-- Issue #1 -->
+        <a class="anchor" id="issue-anchor"></a>
         <div id="issue-1" class="issue-box">
             <div id="issue-1-img" class="issue-img"></div>
             <div id="issue-1-textarea" class="issue-textarea-right issue-textarea">
@@ -140,7 +142,9 @@
                     <p class="in-this-issue">IN THIS ISSUE...</p>
                     <p class="issue-details">You'll start your adventure as a graphic design hero! Learn the basic skills you'll need to do battle with any design challenge that comes your way.</p>
                     <div class="white-bar"></div>
-                    <a href="#!"><button class="download-btn">Download</button></a>
+                    <form action="https://www.dropbox.com/sh/psfxxiqh0zy77jm/AAA_KqFO2hGv_VVavFkac9Uza?dl=0" method="get">
+                        <button class="download-btn">Download</button>
+                    </form>
                     <div class="issue-stats-box">
                         <div class="issue-stat issue-stat-right">
                             <h4>2hrs</h4>
@@ -171,7 +175,9 @@
                     <p class="in-this-issue">IN THIS ISSUE...</p>
                     <p class="issue-details">You’ll embark on a secret mission to uncover the truth about typography and its applications in design. Learning and applying a glossary of term like base line, cap height, leading, kerning, and more—by the end of this adventure, you’ll fly away with all the tools you need to utilize typography as an expressive, integral part of  your designs.</p>
                     <div class="white-bar"></div>
-                    <a href="#!"><button class="download-btn">Download</button></a>
+                    <form action="https://www.dropbox.com/sh/6sb5t16dffdergg/AAB0nqKMbKUd8yhDaVbUKZHma?dl=0" method="get">
+                        <button class="download-btn">Download</button>
+                    </form>
                     <div class="issue-stats-box">
                         <div class="issue-stat issue-stat-left">
                             <h4>2hrs</h4>
@@ -202,7 +208,9 @@
                     <p class="in-this-issue">IN THIS ISSUE...</p>
                     <p class="issue-details">You’ll master the secret weapons you need to become SUPER DESIGNER. Using six comic-themed activities, you’ll explore some of the most important and powerful tools in both Adobe Photoshop &amp; Illustrator.</p>
                     <div class="white-bar"></div>
-                    <a href="#!"><button class="download-btn">Download</button></a>
+                    <form action="https://www.dropbox.com/sh/dgt47mwj4ewd97q/AAAxmM6gmJmjwmOTbf6ENfxda?dl=0" method="get">
+                        <button class="download-btn">Download</button>
+                    </form>
                     <div class="issue-stats-box">
                         <div class="issue-stat issue-stat-right">
                             <h4>2.5hrs</h4>
@@ -225,6 +233,7 @@
         </div>
         <!-- Testimonials -->
         <!-- Testimonials Slider -->
+        <a class="anchor" id="testimonial-anchor"></a>
         <div id="testimonial-box" class="row">
             <div class="offset-lg-1 offset-xl-2"></div>
             <div id="testimonial-0" class="col-12 col-lg-10 col-xl-8 testimonial-wrapper">
@@ -305,12 +314,12 @@
                     <button id="newsletter-btn"></button>
                 </form>
                 <div id="footer-social-icons">
-                    <div id="fb-icon" class="social-icon-box">
+                    <div class="fb-icon social-icon-box">
                         <a href="#!">
                             <img class="social-icon" src="/img/fb-icon.png" alt="PixelPOW on Facebook">
                         </a>
                     </div>
-                    <div id="ig-icon" class="social-icon-box">
+                    <div class="ig-icon social-icon-box">
                         <a href="#!">
                             <img class="social-icon" src="/img/ig-icon.png" alt="PixelPOW on Instagram">
                         </a>
