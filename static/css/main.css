@@ -151,6 +151,7 @@ input {
 }
 #donate-btn-box {
     padding-left: 0px !important;
+    text-align: center;
 }
 #donate-btn {
     height: 100%;
